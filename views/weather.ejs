@@ -1,0 +1,43 @@
+<%- include("header") -%>
+
+<div class="container-fluid col-lg-12">
+
+  <div class="box" id="heading">
+    <h1>Today's weather in <%= typeof name !== 'undefined' ? name : '' %></h1>
+  </div>
+
+  <div class="search-box">
+    <form action="/weather" method="GET">
+      <label for="city"></label>
+      <input type="text" id="city" name="city" required placeholder="Search for a city">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+  
+  <div class="weather-box">
+    <h2>Weather Details</h2>
+    <p class="weather-info">
+      <i class="fas fa-cloud"></i>
+      <span class="description-label">Description: </span> <%= typeof description !== 'undefined' ? description : '' %>
+    </p>
+    <p class="weather-info">
+      <i class="fas fa-thermometer-half"></i>
+      <span class="temp-label">Temperature:</span> <%= typeof temperature !== 'undefined' ? temperature : '' %>°C
+    </p>
+    <p class="weather-info">
+      <i class="fas fa-temperature-low"></i>
+      <span class="feelsLike-label">Feels Like:</span> <%= typeof feelsLike !== 'undefined' ? feelsLike : '' %>°C
+    </p>
+    <p class="weather-info">
+      <i class="fas fa-tint"></i>
+      <span class="humidity-label">Humidity:</span> <%= typeof humidity !== 'undefined' ? humidity : '' %>%
+    </p>
+    <p class="weather-info">
+      <i class="fas fa-wind"></i>
+      <span class="wind-label">Wind Speed:</span> <%= typeof windSpeed !== 'undefined' ? windSpeed : '' %> m/s
+    </p>
+  </div>
+  
+</div>
+
+<%- include("footer") -%>

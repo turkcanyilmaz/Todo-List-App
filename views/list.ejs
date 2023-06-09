@@ -1,0 +1,46 @@
+<%- include("header") -%>
+
+<div class="container-fluid col-lg-12">
+  <div class="box" id="heading">
+    <h1> Today </h1>
+  </div>
+
+  <div class="box">
+
+    <%  newListItems.forEach(function(item) { %>
+
+      <form class="listForm" action="/delete" method="post">
+        <div class="item">
+          <label class="checkbox-label">
+            <input type="checkbox" name="checkbox" value="<%=item._id%>" onchange="this.form.submit()">
+            <span class="checkmark">&#10005;</span>
+          </label>
+          <div id="item-name" class="<%= item.isDeleted ? 'deleted' : '' %>">
+            <p style="text-decoration: none; font-weight: 400;"><%=  item.name  %></p>
+          </div>
+          <div class="edit-container"> 
+            <i class="fas fa-check done-icon" onclick="toggleDeleted(event)"></i>
+          </div>
+        </div>
+        <input type="hidden" name="listName" value="Today"></input>
+      </form>
+    <%  }) %>
+
+    <form class="item listForm" action="/list" method="post">
+      <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+      <button class="listButton" type="submit" name="list" value="Today">+</button>
+    </form>
+  </div>
+</div>
+
+<%- include("footer") -%>
+
+
+<script>
+  function toggleDeleted(event) {
+    const itemContainer = event.target.closest('.item');
+    const itemName = itemContainer.querySelector('#item-name');
+    itemName.classList.toggle('deleted');
+  }
+</script>
+

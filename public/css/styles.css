@@ -1,0 +1,433 @@
+body {
+  background-color: transparent;
+}
+
+html {
+  background: #FEAC5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #A683E3;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#heading {
+  background-color: #fff;
+  text-align: center;
+}
+
+/*navbar*/
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: white;
+}
+
+.navbar-nav  li a:hover {
+    color: #A683E3 !important;
+}
+
+.dropdown-menu {
+  min-width: 120px;
+  max-width: 350px;
+  letter-spacing: 1px;
+  margin-top: 5px ;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+/*list box*/
+.box {
+  max-width: 400px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+/*list item and item input*/
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #F1F1F1;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+#item-name {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin: 20px;
+}
+
+input[name="newItem"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+.edit-container {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.edit-icon,
+.done-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #555;
+}
+.done-icon:hover {
+  color: green;
+}
+
+.edit-icon:hover {
+  color: blue;
+}
+
+input[name="newItem"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+/*list button to add items*/
+.listButton {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.listButton:hover {
+  background-color: #8749CC;
+}
+
+/*button in the contact page*/
+.btn {
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  padding-bottom: 6px;
+  border-width: 0;
+  transition: background-color 0.3s ease;
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: #8749CC;
+  color: #fff;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+/*contact page*/
+.contact {
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+}
+
+.listForm {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.contactForm {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/*footer*/
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#form-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form {
+  width: 25rem ;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #e0497b;
+  color: #ddd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form button:hover {
+  background-color: #f05484;
+  color: white;
+}
+
+.form .login-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form .login-link span {
+  margin-right: 5px;
+  color: #555;
+}
+
+.form a {
+  text-decoration: underline;
+  color: #555;
+}
+
+.form a:hover {
+  color: #000;
+}
+
+.error {
+  color: #f00;
+  font-size: 20px;
+  margin-bottom: 2px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-container {
+	position: relative;
+}
+
+.input-container i {
+	position: absolute;
+	top: 40%;
+	transform: translateY(-50%);
+	right: 10px;
+	color: #888;
+}
+
+.input-container input {
+	padding-left: 30px;
+}
+
+.deleted {
+  text-decoration: line-through;
+}
+
+.deleted p {
+  color: #555;
+  opacity: 0.5;
+}
+
+.checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+} 
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.checkmark:hover {
+  color: red;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  height: 50px;
+  margin-bottom: 1px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.search-box button {
+  background-color: #A683E3;
+  color: #ddd;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.search-box button:hover {
+  background-color: #8749CC;
+  color: white;
+}
+
+.weather-box {
+  max-width: 350px;
+  max-height: 300px;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 15px 10px 15px -5px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+}
+
+.weather-box h2{
+  display: flex;
+  justify-content: center;
+}
+
+.weather-box p{
+  margin-top: -20px;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 7px;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+.weather-info i {
+  margin-right: 10px;
+  font-size: 20px;
+  height: 20px; 
+}
+
+.description-label{
+  margin-left: 8px;
+  margin-right: 5px;
+}
+
+.temp-label{
+  margin-left: 24px;
+  margin-right: 5px;
+}
+
+.feelsLike-label{
+  margin-left: 16px;
+  margin-right: 5px;
+}
+
+.humidity-label{
+  margin-left: 22px;
+  margin-right: 5px;
+}
+
+.wind-label{
+  margin-left: 16px;
+  margin-right: 5px;
+}
+
+
+
+
